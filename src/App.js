@@ -13,7 +13,7 @@ function App() {
 
       setJoined(true);
 
-      rtc.client = AgoraRTC.createClient({ mode: "live", codec: "h264" });
+      rtc.client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
       const uid = await rtc.client.join(
         options.appId,
         channelRef.current.value,
